@@ -1,4 +1,4 @@
-		<div id="footer">Copyright &copy 2014, Widget Corp</div>
+		<div id="footer">Copyright &copy 2014, CSS~events</div>
 		
  </body>
 </html>

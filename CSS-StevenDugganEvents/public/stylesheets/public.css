@@ -1,14 +1,28 @@
 html{height: 100%; width: 100%;}
 body{
 	width: 100%; height: 100%;
-	margin: 0; padding: 0; border: 0;
+   	margin: 0; padding: 0; border: 0;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 13px; line-height: 15px;
-	background:#000000;
+	color: white;
+	background-color:#000000;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 1366px 768px;
 }
+
 img{border: none;}
-a{color: #8D0D19;}
-a:hover{color: #1A446C}
+a{color: white;}
+a:hover{color: #1A446C;}
+
+#bungkuslogo{
+	width:176px;
+	height:176px;
+	float:left;
+	background:blue;
+}
+	
 
 #bungkusheader{
 	height:220px; width:100%;
@@ -17,33 +31,38 @@ a:hover{color: #1A446C}
 	background-position:bottom;
 }
 #header{
-	height: 220px;width:1024px;margin-left:176px;
+	float:left;
+	height: 220px;width:1024px;
 	padding: 0; text-align:center;
 	color: #D4E6F4;
 }
 #header p{padding: 1em; margin: 0;font-size:100px;}
-#header a {text-decoration:none; color:#FFFFFF}
-#header a:hover{text-decoration:none;color:#F062F1;}
+#header a {text-decoration:none; color:white}
+#header a:hover{text-decoration:none;color:#AAAAAA;}
 #main{
 	height:600px; width:100%;
-	margin: 0; padding:0;
-	background: #EEE4B9;
+	padding:2em;
+	background-image:url("bg.png");
 }
 #footer{
 	clear: both;
 	height: 2em; margin: 0; padding: 1em;
 	text-align: center;
-	background:#1A446C; color: #D4E6F4;
+	 color: white;
 }
 /*NAVIGATION*/
 #navigation{
 	float:left;
 	width: 150px; height:100%;
-	margin: 0; padding: 0 2em;
-	color: #D4E6F4; background: #8D0D19;
+	margin-top:-2em;
+	margin-left: 166px; margin-right:20px;
+	padding-left:8px;
+	padding-top:2em;
+	background-image:url("bg.png");
+	color: white;
 }
-#navigation a{color: #D4E6F4; text-decoration: none;}
-#navigation a:hover{color: #FFFFFF;}
+#navigation a{color: white; text-decoration: none;}
+#navigation a:hover{color: #AAAAAA;}
 ul.subjects{
 	margin: 1em 0; padding-left: 0; list-style: none;
 }
@@ -52,9 +71,11 @@ ul.pages{padding-left:2em; list-style:square;}
 
 /*PAGE CONTENT*/
 #page {
-	float:left; height:100%;
-	padding-left: 2em; vertical-align: top;
-	background: #EEE4B9;
+	 height:100%;
+	 width: 768px;
+	 margin-left: 380px;
+	 vertical-align: top;
+	
 }
-#page h2 {color: #8D0D19; margin-top: 1em;}
-#page h3 {color: #8D0D19;}
+#page h2 {color: white; margin-top: 1em;}
+#page h3 {color: white;}
