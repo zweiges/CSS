@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2014 at 08:41 AM
+-- Generation Time: Dec 11, 2014 at 05:22 
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -61,6 +61,27 @@ INSERT INTO `contact` (`nama`, `email`, `event`, `desk`) VALUES
 ('asd', 'asd', 'Tahun Baru', '<p>asd</p>'),
 ('asd', 'asd', 'Tahun Baru', '<p>asd</p>'),
 ('test', 'test', 'Tahun Baru', '<p>asdasd</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logo`
+--
+
+CREATE TABLE IF NOT EXISTS `logo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(20) NOT NULL,
+  `body` text NOT NULL,
+  `gambar` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `logo`
+--
+
+INSERT INTO `logo` (`id`, `title`, `body`, `gambar`) VALUES
+(1, 'test', '', 'images/images.jpg');
 
 -- --------------------------------------------------------
 
