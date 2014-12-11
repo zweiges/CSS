@@ -1,10 +1,11 @@
-<?php session_start();
+<?php session_start();//menyimpan session login
 	function redirect_to($new_location) {
 		header("Location: " . $new_location);
 		exit;
 	}
 	
 	function mysql_prep($string){
+	// untuk membuat komputer memahami query yang benar
 	 global $koneksi;
 	 $escape_string = mysqli_real_escape_string($koneksi, $string);
 	 return $escape_string;
@@ -14,6 +15,7 @@
 		if(!$result_set) {
 			die("Query ERROR.");
 	 	}
+		//membuat proses berhenti jika ada error dalam query
 	}
 	
 	function find_selected_page($public=false){
@@ -21,20 +23,22 @@
 	global $current_page;
 	 if (isset($_GET["subject"])){
 	  $current_subject = find_subject_by_id($_GET["subject"], $public); 
-	  if($current_subject && $public){
-	    $current_subject = find_subject_by_id($_GET["subject"], $public); 
-	  } else {
-	    $current_page = null;
+		if($current_subject && $public){
+			$current_subject = find_subject_by_id($_GET["subject"], $public); 
+		} else {
+			$current_page = null;
+				}
+		if($public){
+			$current_page = find_default_page_for_subject($current_subject["id"]);
+		} else {
+			$current_page = null; 
+				}
 	  }
-	  if($public){
-		$current_page = find_default_page_for_subject($current_subject["id"]);
-	  } else {
-		  $current_page = null; 
-		}
-	  }else if (isset($_GET["page"])){
+	  else if (isset($_GET["page"])){
 	   $current_page = find_page_by_id($_GET["page"], $public); 
 	   $current_subject = null;
-	  } else {
+	  } 
+	  else {
 	   $current_subject = null;
 	   $current_page = null;
 	  }
@@ -130,7 +134,8 @@
 	
 	function find_all_subjects($public = true){
 		global $koneksi;
-		//WHERE visible = 1
+		//kalau true berarti untuk umum, false untuk admin, false menampilkan semua subject yang ada
+		//mencari subject WHERE visible = 1
 		$query = "SELECT * ";
 		$query .= "FROM subjects ";
 		if($public){
