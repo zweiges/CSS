@@ -3,6 +3,7 @@
 <?php require_once("../includes/validation_functions.php"); ?>
 
 <?php 
+//membuat alamat dapat diakses hanya melalui klik link yang tersedia di navigasi
 if (isset($_POST['submit'])){
 	$nama = mysql_prep($_POST['nama']);
 	$email = mysql_prep($_POST['email']);
@@ -21,11 +22,8 @@ if (isset($_POST['submit'])){
 	$query .= " '{$nama}', '{$email}', '{$event}', '{$desk}'";
 	$query .= ")";
 	$result = mysqli_query($koneksi, $query);
-	
+	//mengecek apakah fitur contact berhasil
 	if ($result) {
-		echo "<script type='text/javascript'>";
-		echo "window.alert('My name is George. Welcome!')";
-		echo "</script>";
 		redirect_to("index.php");
 	} else {
 		redirect_to("contact.php");

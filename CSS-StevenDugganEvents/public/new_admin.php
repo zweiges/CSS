@@ -2,6 +2,7 @@
 <?php require_once("../includes/function.php"); ?>
 <?php require_once("../includes/validation_functions.php"); ?>
 <?php
+//untuk menambahkan admin
 	if(isset($_POST["submit"])) {
 		$username = mysql_prep($_POST["username"]);
 		$hashed_password = password_encrypt($_POST["password"]);

@@ -3,6 +3,7 @@
 <?php require_once("../includes/validation_functions.php"); ?>
 
 <?php 
+//page untuk memproses query yang ada tidak bisa diakses secara langsung hanya melalui submit form
 if (isset($_POST['submit'])){
 	$menu_name = mysql_prep($_POST['menu_name']);
 	$position = mysql_prep($_POST['position']);
@@ -37,5 +38,6 @@ if (isset($_POST['submit'])){
 ?>
 
 <?php 
+//menutup koneksi database yang ada
 	if(isset($koneksi)){ mysqli_close($koneksi); }
 ?>

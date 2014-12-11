@@ -1,12 +1,14 @@
 <?php require_once("../includes/db_connection.php");?>
 <?php require_once("../includes/function.php");?>
 <?php
+//jika id admin tidak ditemukan kembali ke halaman manage_admin
 $admin = find_admin_by_id($_GET['id']);
 	if(!$admin){
 		redirect_to("manage_admin.php");
 	}
 ?>
 <?php
+//query untuk menghapus admin yang ada
 	$id = $admin["id"];
 	$sql = "DELETE FROM admins
 					WHERE id = '{$id}'
