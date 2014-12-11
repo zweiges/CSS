@@ -1,6 +1,6 @@
-<?php require_once("../includes/function.php"); ?>
-<?php confirm_logged_in(); ?>
-<?php include("../includes/layouts/header.php"); ?>
+<?php require_once("../includes/function.php"); //memanggil file file penyimpanan fungsi?>
+<?php confirm_logged_in(); /*untuk memastikan user sudah login*/?>
+<?php include("../includes/layouts/header.php"); //memanggil header.php yang menyimpan kode untuk memulai setiap halaman?>
 	<div id="main">
 		<div id="navigation">
 		</div>
@@ -14,4 +14,4 @@
 			</ul>
 		</div>
 	</div>
-<?php include("../includes/layouts/footer.php"); ?>	
+<?php include("../includes/layouts/footer.php");//memanggil footer.php yang menyimpan kode footer setiap halaman ?>	

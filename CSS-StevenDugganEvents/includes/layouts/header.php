@@ -48,6 +48,7 @@ window.onload=new Function('setInterval("bgSlide()",3000)')
 		<div id="bungkusheader">
 		<div id="bungkuslogo">
 		<img src="<?php echo $baris["gambar"];?>"/>
+		<img src="<?php echo $baris["gambar"];?>" style="width="176px"; height="176px"/>
 		</div>
 		<div id="header">
 			<p style="text-align:right;font-size:12px;"><img src="images/icoMail.png" align="right">Email Us	: info@cssevent.com</p>
