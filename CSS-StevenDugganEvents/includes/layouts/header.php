@@ -1,3 +1,15 @@
+<?php require_once("../includes/db_connection.php"); ?>
+<?php
+ if(!isset($layout_context)){
+ $layout_context = "public";
+ }
+ $sql = "SELECT *
+		FROM logo
+		ORDER BY id DESC
+		LIMIT 1";
+$hasil = mysqli_query($koneksi, $sql);
+$baris = mysqli_fetch_assoc($hasil);
+?>
 <html>
 	<head>
 		<title>untitled</title>
@@ -35,6 +47,7 @@ window.onload=new Function('setInterval("bgSlide()",3000)')
 	<body background="http://localhost/CSS-StevenDugganEvents/public/3.jpg">
 		<div id="bungkusheader">
 		<div id="bungkuslogo">
+		<img src="<?php echo $baris["gambar"];?>"/>
 		</div>
 		<div id="header">
 			<p style="text-align:right;font-size:12px;"><img src="images/icoMail.png" align="right">Email Us	: info@cssevent.com</p>
